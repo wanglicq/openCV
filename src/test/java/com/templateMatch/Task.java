@@ -1,4 +1,4 @@
-package com.templateMatch.test;
+package com.TemplateMatch;
 
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
