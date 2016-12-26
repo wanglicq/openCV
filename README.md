@@ -14,17 +14,17 @@ project structure  -->  Modules  -->  1_test  --> click "+" at the bottom  --> J
 Edit Configurations... -->  Configuration  -->  add -Djava.library.path=/your/path/OpenCV/java/ (-Djava.library.path=/opt/local/share/OpenCV/java/) to VM options
 
 ## task
-### 模版匹配
+### 一 模版匹配
 refer http://docs.opencv.org/2.4/doc/tutorials/imgproc/histograms/template_matching/template_matching.html#template-matching
 
-#### 识别lena的脸
-1.完成matchAndFindLoc函数，获取最佳匹配位置
+#### 1 识别lena的脸
+1.1完成matchAndFindLoc函数，获取最佳匹配位置
 
-2.完成getMatchArea函数，画出匹配区域
+1.2完成getMatchArea函数，画出匹配区域
 
-### 练习与Appium结合，识别login，实现微信的登录
+#### 2 练习与Appium结合，识别login，实现微信的登录
 
-### 颜色识别和轮廓勾勒
+### 二 颜色识别和轮廓勾勒
 refer http://docs.opencv.org/2.4/doc/tutorials/imgproc/shapedescriptors/bounding_rects_circles/bounding_rects_circles.html#bounding-rects-circles
 
 
