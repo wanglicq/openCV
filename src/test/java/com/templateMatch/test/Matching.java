@@ -61,7 +61,8 @@ public class Matching {
 
     //draw a rectangel on matching area
     private static void getMatchArea(Mat src, Mat tmp, Point matchLoc, String... args) {
-
+        Point endpoint = new Point(matchLoc.x + tmp.cols(), matchLoc.y + tmp.rows());
+        Imgproc.rectangle(src, matchLoc, endpoint, new Scalar(0, 255, 0));
     }
 
 

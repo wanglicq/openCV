@@ -4,7 +4,7 @@ package com.templateMatch.test;
 import org.junit.Test;
 import org.opencv.core.Core;
 
-public class TemplateMatching {
+public class DectectLenaFace {
     static {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
     }

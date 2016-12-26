@@ -10,8 +10,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.URL;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 public class testWechat {
@@ -41,6 +39,7 @@ public class testWechat {
 
     @Test
     public void opencvLogin() throws Exception {
+
 
     }
 
