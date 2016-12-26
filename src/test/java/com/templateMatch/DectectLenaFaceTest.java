@@ -4,6 +4,9 @@ package com.templateMatch;
 import org.junit.Test;
 import org.opencv.core.Core;
 
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertThat;
+
 public class DectectLenaFaceTest {
     static {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
@@ -16,6 +19,7 @@ public class DectectLenaFaceTest {
     public void FindLenaFace() throws Exception {
         int location[] = matching.getMatchingLocation("screenshots/lena.png", "temp/temp_lena_face.png", "compare/lena_face.png");
         System.out.println("x= "+location[0]+",  y="+location[1]);
+        assertNotNull(location);
     }
 
 

@@ -5,7 +5,7 @@ import org.opencv.core.Size;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
-public class smooth {
+public class Smooth {
 
     public static void smooth(String filename) {
         Mat image = new Mat();

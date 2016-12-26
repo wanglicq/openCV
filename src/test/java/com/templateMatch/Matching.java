@@ -10,68 +10,60 @@ public class Matching {
 
     public static int[] getMatchingLocation(String... args) throws Exception {
         // Read source image and template image
-        Mat src = readImage(0, args);
-        Mat tmp = readImage(1, args);
+        Mat src = Imgcodecs.imread(args[0], 0);
+        Mat tmp = Imgcodecs.imread(args[1], 0);
 
         // Create the result matrix
-        Mat result = createResultMatrix(src, tmp);
-
-        // Match Template Function from OpenCV
-        Core.MinMaxLocResult mmr = matchAndFindLoc(src, tmp, result, Imgproc.TM_SQDIFF_NORMED);
-
-        // Got location
-        Point matchLoc = getCorrectLoc(mmr, Imgproc.TM_SQDIFF_NORMED);
-
-        //show what we got
-        getMatchArea(src, tmp,  matchLoc, args);
-
-        //return location
-        int myLocation[] = getClickLocation(matchLoc, tmp);
-
-        return myLocation;
-    }
-
-
-    private static Mat readImage(int index, String... args){
-        return Imgcodecs.imread(args[index], 0);
-    }
-
-    private static Mat createResultMatrix(Mat src, Mat tmp) {
         int result_cols = src.cols() - tmp.cols() +1;
         int result_rows = src.rows() - tmp.rows() +1;
         Mat result = new Mat(result_cols,result_rows, CvType.CV_32FC1);
-        return result;
-    }
-
-    //get match min and max location
-    private static Core.MinMaxLocResult matchAndFindLoc(Mat src, Mat tmp, Mat result, int method) {
-
-    }
 
 
-    private static Point getCorrectLoc(Core.MinMaxLocResult mmr, int method) {
+
+        // Match Template Function from OpenCV
+        int method = Imgproc.TM_SQDIFF_NORMED; // select a matching method
+        //*****     matching and get the result matrix     ********
+
+        //****     get the min and max  values and their locations    *****
+        Core.MinMaxLocResult mmr = null;
+
+
+
+        // Got location and match percentage
+        Point matchLoc;
+        double matchPercentage;
         if(method == Imgproc.TM_SQDIFF_NORMED || method == Imgproc.TM_SQDIFF){
-            return mmr.minLoc;
+            matchLoc =  mmr.minLoc;
+            matchPercentage = 1-mmr.minVal;
         }
         else {
-            return mmr.maxLoc;
+            matchLoc =  mmr.maxLoc;
+            matchPercentage = mmr.maxVal;
         }
 
-    }
 
-    //draw a rectangel on matching area
-    private static void getMatchArea(Mat src, Mat tmp, Point matchLoc, String... args) {
+        //show what we got
+        //***** get the endPoint  *****
+        Point endPoint;
+        //***** draw a rectangle from the matchLoc to endPoint;   *****
 
-    }
+        //write the compare result
+        Imgcodecs.imwrite("compare/lena_face.png", src);
 
 
-    private static int[] getClickLocation(Point matchLoc, Mat tmp) {
+
+        //return location
         Double x1 = matchLoc.x;
         Double y1 = matchLoc.y;
         int x = x1.intValue() + tmp.cols()/2;
         int y = y1.intValue() + tmp.rows()/2;
-        return new int[]{x, y};
+
+        System.out.println(matchPercentage);
+        if(matchPercentage > 0.95) {
+            return new int[]{x, y};
+        }
+        else{
+            return null;
+        }
     }
-
-
 }
