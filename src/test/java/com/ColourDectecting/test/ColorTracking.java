@@ -16,9 +16,7 @@ import java.util.List;
 
 import static org.opencv.imgproc.Imgproc.CHAIN_APPROX_SIMPLE;
 
-/**
- * Created by PeChen on 11/2/16.
- */
+// http://docs.opencv.org/2.4/doc/tutorials/imgproc/shapedescriptors/bounding_rects_circles/bounding_rects_circles.html#bounding-rects-circles
 public class ColorTracking {
     static {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);

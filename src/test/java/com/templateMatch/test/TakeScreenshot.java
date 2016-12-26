@@ -7,9 +7,6 @@ import org.openqa.selenium.OutputType;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * Created by wangli on 17/12/2016.
- */
 public class TakeScreenshot {
     public void take(AppiumDriver wd, String arg) {
         // Set folder name to store screenshots.

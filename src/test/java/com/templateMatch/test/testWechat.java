@@ -14,11 +14,6 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-
-
-/**
- * Created by PeChen on 8/18/16.
- */
 public class testWechat {
     AppiumDriver wd;
     static {

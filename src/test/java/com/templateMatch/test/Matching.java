@@ -4,13 +4,12 @@ import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
-/**
- * Created by wangli on 17/12/2016.
- */
+
+// http://docs.opencv.org/2.4/doc/tutorials/imgproc/histograms/template_matching/template_matching.html#template-matching
 public class Matching {
 
     public static int[] getMatchingLocation(String... args) throws Exception {
-        // create input and output mat
+        // Read source image and template image
         Mat src = readImage(0, args);
         Mat tmp = readImage(1, args);
 
@@ -27,7 +26,6 @@ public class Matching {
         getMatchArea(src, tmp,  matchLoc, args);
 
         //return location
-
         int myLocation[] = getClickLocation(matchLoc, tmp);
 
         return myLocation;
