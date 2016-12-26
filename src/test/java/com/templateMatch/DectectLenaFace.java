@@ -1,4 +1,4 @@
-package com.templateMatch.test;
+package com.templateMatch;
 
 
 import org.junit.Test;

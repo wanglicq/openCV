@@ -1,4 +1,4 @@
-package com.templateMatch.test;
+package com.templateMatch;
 
 import io.appium.java_client.AppiumDriver;
 import org.apache.commons.io.FileUtils;

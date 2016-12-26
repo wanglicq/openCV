@@ -1,4 +1,4 @@
-package com.ColourDectecting.test;
+package com.ColourDectecting;
 
 import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;
