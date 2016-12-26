@@ -16,9 +16,6 @@ import java.util.List;
 
 import static org.opencv.imgproc.Imgproc.CHAIN_APPROX_SIMPLE;
 
-/**
- * Created by PeChen on 11/2/16.
- */
 public class ColorTracking {
     static {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);

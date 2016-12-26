@@ -3,9 +3,6 @@ package com.templateMatch.test;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 
-/**
- * Created by wangli on 10/11/2016.
- */
 public class Task implements Runnable{
 
     TakeScreenshot screenshot = new TakeScreenshot();

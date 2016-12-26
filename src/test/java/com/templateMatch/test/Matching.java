@@ -4,9 +4,6 @@ import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
-/**
- * Created by wangli on 17/12/2016.
- */
 public class Matching {
 
     public static int[] getMatchingLocation1(String... args) throws Exception {

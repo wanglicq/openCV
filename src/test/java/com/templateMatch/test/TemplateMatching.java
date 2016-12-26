@@ -4,9 +4,6 @@ package com.templateMatch.test;
 import org.junit.Test;
 import org.opencv.core.Core;
 
-/**
- * Created by wangli on 21/12/2016.
- */
 public class TemplateMatching {
     static {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
