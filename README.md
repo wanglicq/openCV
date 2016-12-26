@@ -19,6 +19,7 @@ refer http://docs.opencv.org/2.4/doc/tutorials/imgproc/histograms/template_match
 
 #### 识别lena的脸
 1.完成matchAndFindLoc函数，获取最佳匹配位置
+
 2.完成getMatchArea函数，画出匹配区域
 
 ### 练习与Appium结合，识别login，实现微信的登录
