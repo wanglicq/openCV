@@ -56,7 +56,7 @@ public class ColorTracking {
 
                 Imgproc.GaussianBlur(colors,colors,new Size(9,9),0,0);
 
-                detection_contours(colors);
+                //detection_contours(colors);
 
                 ImageIcon image = new ImageIcon(Mat2bufferedImage(imag));
                 vidpanel.setIcon(image);
