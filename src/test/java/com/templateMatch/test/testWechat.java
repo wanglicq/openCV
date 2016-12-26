@@ -40,7 +40,6 @@ public class testWechat {
     @Test
     public void opencvLogin() throws Exception {
 
-
     }
 
 
