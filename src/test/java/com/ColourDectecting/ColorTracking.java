@@ -105,7 +105,6 @@ public class ColorTracking {
 //                Imgproc.rectangle(imag,r.tl(),r.br(),new Scalar(0,0,255),3,8,0);
                 Imgproc.drawContours(imag,contours,idx,new Scalar(0,0,255),3);
             }
-
         }
         v.release();
 

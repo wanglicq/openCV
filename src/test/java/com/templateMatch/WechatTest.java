@@ -12,7 +12,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class testWechat {
+public class WechatTest {
     AppiumDriver wd;
     static {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
