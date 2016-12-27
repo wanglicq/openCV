@@ -1,4 +1,4 @@
-package com.templateMatch;
+package com.TemplateMatch;
 
 import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;

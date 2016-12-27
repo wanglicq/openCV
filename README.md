@@ -10,8 +10,10 @@ git checkout branch1
 ### 在intellijIdea中打开项目，然后把OpenCV添加进项目，前提是OpenCV已按照文档提前装好
 project structure  -->  Modules  -->  1_test  --> click "+" at the bottom  --> JARs or directories...
 -->  add /your/path/opencv-310.jar (/opt/local/share/OpenCV/java/opencv-310.jar) 
-### run的时候，需要配置VMoptions
-Edit Configurations... -->  Configuration  -->  add -Djava.library.path=/your/path/OpenCV/java/ (-Djava.library.path=/opt/local/share/OpenCV/java/) to VM options
+### 配置VMoptions
+Edit Configurations... -->  default  -->  Application  -->  Configuration  -->  add -Djava.library.path=/your/path/OpenCV/java/ (-Djava.library.path=/opt/local/share/OpenCV/java/) to VM options
+Edit Configurations... -->  default  -->  Junit  -->  Configuration  -->  add -Djava.library.path=/your/path/OpenCV/java/ (-Djava.library.path=/opt/local/share/OpenCV/java/) to VM options
+
 
 ## task
 ### 一 模版匹配

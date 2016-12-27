@@ -1,18 +1,16 @@
-package com.templateMatch;
-
+package com.TemplateMatch;
 
 import org.junit.Test;
 import org.opencv.core.Core;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertThat;
 
 public class DectectLenaFaceTest {
     static {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
     }
 
-    Matching matching =new Matching();
+    Matching matching = new Matching();
 
 
     @Test
