@@ -12,6 +12,7 @@ project structure  -->  Modules  -->  1_test  --> click "+" at the bottom  --> J
 -->  add /your/path/opencv-310.jar (/opt/local/share/OpenCV/java/opencv-310.jar) 
 ### 配置VMoptions
 Edit Configurations... -->  default  -->  Application  -->  Configuration  -->  add -Djava.library.path=/your/path/OpenCV/java/ (-Djava.library.path=/opt/local/share/OpenCV/java/) to VM options
+
 Edit Configurations... -->  default  -->  Junit  -->  Configuration  -->  add -Djava.library.path=/your/path/OpenCV/java/ (-Djava.library.path=/opt/local/share/OpenCV/java/) to VM options
 
 
